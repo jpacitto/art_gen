@@ -2,7 +2,7 @@ from keras.layers import Input, Reshape, Dropout, Dense, Flatten, BatchNormaliza
 from keras.layers.advanced_activations import LeakyReLU
 from keras.layers.convolutional import UpSampling2D, Conv2D
 from keras.models import Sequential, Model, load_model
-from tensorflow.keras.optimizers import Adam
+from keras.optimizers import Adam
 import numpy as np
 from PIL import Image
 import os
@@ -18,7 +18,7 @@ NOISE_SIZE = 123
 
 # Configuration
 EPOCHS = 50000  # number of iterations
-BATCH_SIZE = 32
+BATCH_SIZE = 64
 
 GENERATE_RES = 3
 IMAGE_SIZE = 128  # rows/cols
@@ -26,7 +26,7 @@ IMAGE_SIZE = 128  # rows/cols
 IMAGE_CHANNELS = 3
 
 
-training_data = np.load('cubism_data.npy')
+training_data = np.load('/spell/cubism_data.npy')
 
 
 def build_discriminator(image_shape):
